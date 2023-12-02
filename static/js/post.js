@@ -9,7 +9,7 @@ function post() {
     }
 
     var request = new XMLHttpRequest();
-    var url = 'https://heroku-mysql-b9e2aa5c918c.herokuapp.com/contactos';
+    var url = 'https://foryhero-757dbb79eee5.herokuapp.com/contactos';
 
     request.open('POST', url);
     request.setRequestHeader('Content-Type', 'application/json');
