@@ -1,7 +1,7 @@
 function getForEmail() {
     var email = document.getElementById("email").value; 
     var request = new XMLHttpRequest();
-    var url = "https://heroku-mysql-b9e2aa5c918c.herokuapp.com/contactos/" + encodeURIComponent(email);
+    var url = "https://foryhero-757dbb79eee5.herokuapp.com/contactos/" + encodeURIComponent(email);
     request.open('GET', url);
     request.send();
     

@@ -3,7 +3,7 @@ const email = urlParams.get('email');
 
 function getContactDetails() {
     var request = new XMLHttpRequest();
-    request.open('GET', "https://heroku-mysql-b9e2aa5c918c.herokuapp.com/contactos/" + email);
+    request.open('GET', "https://foryhero-757dbb79eee5.herokuapp.com/contactos/" + email);
     request.send();
 
     request.onload = (e) => {

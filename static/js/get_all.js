@@ -1,6 +1,6 @@
 function getAll() {
     var request = new XMLHttpRequest();
-    request.open('GET', "https://heroku-mysql-b9e2aa5c918c.herokuapp.com/contactos");
+    request.open('GET', "https://foryhero-757dbb79eee5.herokuapp.com/contactos");
     request.send();
 
     request.onload = (e) => {

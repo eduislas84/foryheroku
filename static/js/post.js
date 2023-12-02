@@ -9,7 +9,7 @@ function post() {
     }
 
     var request = new XMLHttpRequest();
-    var url = ''https://heroku-mysql-b9e2aa5c918c.herokuapp.com/contactos';
+    var url = 'https://foryhero-757dbb79eee5.herokuapp.com/contactos'; // Corregí la URL
 
     request.open('POST', url);
     request.setRequestHeader('Content-Type', 'application/json');
@@ -32,21 +32,20 @@ function post() {
         } else {
             // Error al guardar datos
             console.error('Error al enviar datos:', request.status, request.statusText);
-    
+
             if (request.status === 400) {
                 // Error específico de contacto duplicado
                 alert('El contacto ya existe. Por favor, ingrese un correo diferente.');
             } else {
                 // Otros errores
-                alert('Ocurrió un problema al guardar los datos. El contacto ya existe. Por favor, ingrese un correo diferente.');
+                alert('Ocurrió un problema al guardar los datos. Por favor, ingrese un correo diferente.');
             }
         }
     };
-    
+
     // Manejar errores de red
     request.onerror = function () {
         console.error('Error de red al enviar datos');
         alert('Ocurrió un problema de red al intentar guardar los datos. Por favor, inténtelo nuevamente más tarde.');
     };
-    
 }
