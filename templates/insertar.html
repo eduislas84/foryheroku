@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+D<!OCTYPE html>
 <html lang="es">
 
 <head>
@@ -19,9 +19,14 @@
         <input type="text" id="nombre" name="nombre" required/></p>
         <p><label for="telefono">Telefono:</label>
         <input type="text" id="telefono" name="telefono" required/></p>
-        <button type="button" onclick="post(document.getElementById('email', 'nombre', 'telefono').value)">
+        <button type="button" onclick="post(
+            document.getElementById('email').value,
+            document.getElementById('nombre').value,
+            document.getElementById('telefono').value
+        )">
             Insertar
         </button>
+
     </form>
 </body>
 

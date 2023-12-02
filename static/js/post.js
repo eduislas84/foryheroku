@@ -32,7 +32,7 @@ function post() {
         } else {
             // Error al guardar datos
             console.error('Error al enviar datos:', request.status, request.statusText);
-
+    
             if (request.status === 400) {
                 // Error específico de contacto duplicado
                 alert('El contacto ya existe. Por favor, ingrese un correo diferente.');
@@ -42,4 +42,11 @@ function post() {
             }
         }
     };
+    
+    // Manejar errores de red
+    request.onerror = function () {
+        console.error('Error de red al enviar datos');
+        alert('Ocurrió un problema de red al intentar guardar los datos. Por favor, inténtelo nuevamente más tarde.');
+    };
+    
 }
