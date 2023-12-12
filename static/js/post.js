@@ -34,12 +34,13 @@ function post() {
             console.error('Error al enviar datos:', request.status, request.statusText);
 
             if (request.status === 400) {
-                // Error específico de contacto duplicado
-                alert('El contacto ya existe. Por favor, ingrese un correo diferente.');
-            } else {
-                // Otros errores
-                alert('Ocurrió un problema al guardar los datos. Por favor, ingrese un correo diferente.');
-            }
+    // Error específico de contacto duplicado
+    alert('El contacto ya existe. Por favor, ingrese un correo diferente.');
+} else {
+    // Otros errores
+    alert('Ocurrió un problema al guardar los datos. El contacto ya existe. Por favor, ingrese un correo diferente.');
+}
+
         }
     };
 
